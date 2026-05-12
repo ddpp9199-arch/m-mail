@@ -4,11 +4,11 @@ http.createServer((req, res) => { res.write("M-Mail Online!"); res.end(); }).lis
 const { Client, GatewayIntentBits, EmbedBuilder, SlashCommandBuilder, REST, Routes } = require('discord.js');
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
 
-// --- ข้อมูลไอดีที่เธอให้มาล่าสุด ---
+// --- ข้อมูลไอดีที่เรามีกันแล้ว ---
 const SOURCE_ID = '1496039663540895774'; // ห้องเขียนคำสั่ง /send
 const TARGET_ID = '1496039934912630854'; // ห้องที่ข้อความจะไปถึง
-const CLIENT_ID = 'ใส่ไอดีบอทตัวที่2ตรงนี้'; // เอามาจาก Discord Developer Portal
-const GUILD_ID = 'ใส่ไอดีเซิร์ฟเวอร์ตรงนี้'; // ไอดีดิสคอร์ดของเธอ
+const CLIENT_ID = '1503702683742240889'; // ไอดีบอทที่เธอเพิ่งให้มา
+const GUILD_ID = 'ใส่ไอดีเซิร์ฟเวอร์ของเธอตรงนี้'; 
 // -----------------------
 
 const commands = [
@@ -45,15 +45,13 @@ client.on('interactionCreate', async interaction => {
                 .setFooter({ text: `ส่งเมื่อ: ${new Date().toLocaleTimeString('th-TH')}` });
 
             await target.send({ embeds: [embed] });
-            
             await interaction.reply({ content: 'ส่งข้อความเรียบร้อยแล้วครับ! ദ്ดิ◝ ⩊ ◜.ᐟ' });
             setTimeout(() => interaction.deleteReply().catch(() => {}), 2000);
         }
     }
 
     if (interaction.commandName === 'ssoo') {
-        const helpText = `**วิธี ฝากบอกคนน่ารัก  ദ്ดิ◝ ⩊ ◜.ᐟ**\n- พิมพ์คำสั่ง \`/send\` ในช่องแชทห้องนี้\n- จะมีช่องขึ้นมาให้เติม 2 ช่อง: **ฝาก** และ **ใบ้**\n- กด Enter เพื่อส่งได้เลยครับ ข้อความจะเด้งไปอีกช่องนึงทันที`;
-        await interaction.reply({ content: helpText });
+        await interaction.reply({ content: `**วิธี ฝากบอกคนน่ารัก  ദ്ดิ◝ ⩊ ◜.ᐟ**\n- พิมพ์คำสั่ง \`/send\` ในช่องแชทห้องนี้\n- จะมีช่องขึ้นมาให้เติม 2 ช่อง: **ฝาก** และ **ใบ้**\n- กด Enter เพื่อส่งได้เลยครับ` });
     }
 });
 
