@@ -8,7 +8,7 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBit
 const SOURCE_ID = '1496039663540895774'; // ห้องเขียนคำสั่ง /send
 const TARGET_ID = '1496039934912630854'; // ห้องที่ข้อความจะไปถึง
 const CLIENT_ID = '1503702683742240889'; // ไอดีบอทที่เธอเพิ่งให้มา
-const GUILD_ID = 'ใส่ไอดีเซิร์ฟเวอร์ของเธอตรงนี้'; 
+const GUILD_ID = '1480399608457859082'; 
 // -----------------------
 
 const commands = [
