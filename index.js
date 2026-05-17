@@ -1,7 +1,7 @@
 const { Client, GatewayIntentBits, REST, Routes, SlashCommandBuilder } = require('discord.js');
 
 // --- ข้อมูลที่ตั้งค่าไว้ให้แล้ว ---
-const TOKEN = 'MTUwMzcwMjY4Mzc0MjI0MDg4OQ.Gtf9EV.LnINurY8200nYxocrJgzH3jSu-whn5oWoqTwS0'; 
+const TOKEN = 'MTUwMzcwMjY4Mzc0MjI0MDg4OQ.GkOSiv.83HJfxrJDCTfkBPSb3WFSOlbUP4Pmyp-hMx0jU'; 
 const CLIENT_ID = '1503702683742240889'; 
 const TARGET_CHANNEL_ID = '1496039934912630854'; 
 
